@@ -5,6 +5,7 @@
     date --date='{{ composer_update_day }} days ago' +'%s'
   register: composer_date
   changed_when: False
+  always_run: True
 
 - name: Update composer if necessary
   shell:
